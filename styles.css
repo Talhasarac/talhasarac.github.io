@@ -15,7 +15,8 @@
 }
 
 *{ box-sizing: border-box; }
-html, body{ height: 100%; }
+html{ height: 100%; }
+body{ min-height: 100%; }
 body{
   margin: 0;
   color: var(--text);
@@ -45,9 +46,19 @@ a{ color: inherit; text-decoration: none; }
   background: var(--divider);
 }
 
-/* Header / Hero */
+/* Header */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: clamp(18px, 2.8vw, 28px) 0;
+  background: rgba(20, 3, 18, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--divider);
+}
+
 .hero{
-  padding: clamp(44px, 5vw, 64px) 0 clamp(40px, 5vw, 62px);
+  padding: clamp(24px, 4vw, 40px) 0 clamp(40px, 5vw, 62px);
 }
 
 .header-inner{
